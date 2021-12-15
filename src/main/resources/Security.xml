@@ -9,12 +9,15 @@
 
     <beans:import resource="application-context.xml"/>
 
+    <global-method-security secured-annotations="enabled"
+                            pre-post-annotations="enabled"/>
+
     <http>
         <intercept-url pattern="/" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
         <intercept-url pattern="/login" access="permitAll()"/>
-        <intercept-url pattern="/user/*" access="hasRole('ROLE_USER')"/>
-        <intercept-url pattern="/admin/*" access="hasRole('ROLE_ADMIN')"/>
-        <intercept-url pattern="/moder/*" access="hasRole('ROLE_MODERATOR')"/>
+<!--        <intercept-url pattern="/user/*" access="hasRole('ROLE_USER')"/>-->
+<!--        <intercept-url pattern="/admin/*" access="hasRole('ROLE_ADMIN')"/>-->
+<!--        <intercept-url pattern="/moder/*" access="hasRole('ROLE_MODERATOR')"/>-->
 
 
         <form-login login-page="/login"
