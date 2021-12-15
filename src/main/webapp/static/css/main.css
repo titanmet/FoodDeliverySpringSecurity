@@ -1,0 +1,38 @@
+header {
+    min-height: 75px;
+    background-color: #282c3b;
+}
+
+a.main-logo-link {
+    text-decoration: none;
+    color: white;
+}
+
+a.main-logo-link:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.row {
+    min-height: 713px;
+}
+
+#img_col {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#user_profile_pic {
+    background-image: url("../images/user-page.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#admin_profile_pic {
+    background-image: url("../images/admin-page.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+
+
