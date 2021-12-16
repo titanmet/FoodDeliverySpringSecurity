@@ -19,15 +19,12 @@ public class UserController {
         this.userService = userService;
     }
 
-    @Secured("ROLE_USER")
     @GetMapping("/user/{id}")
     public String welcome(@PathVariable Long id, Model model) {
         model.addAttribute("user", userService.get(id));
         return "user-profile";
     }
 
-    @Secured("ROLE_ADMIN")
-    @PreAuthorize("isAuthenticated()")
     @GetMapping("/admin/{id}")
     public String getAdminPage(@PathVariable Long id, Model model) {
         model.addAttribute("admin", userService.get(id));

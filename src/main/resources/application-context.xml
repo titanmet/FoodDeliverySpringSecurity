@@ -79,5 +79,6 @@
         <!--    Spring Security-->
     </bean>
 
+    <bean id="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
 
 </beans>

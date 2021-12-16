@@ -33,7 +33,7 @@ public class UserServiceImpl implements UserService {
     @Transactional
     public void createUser(User user) {
         if (user.getRoles() == null) {
-            user.setRoles(new HashSet<>(Collections.singletonList(Role.ROLE_USER)));
+            user.setRoles(new HashSet<>(Collections.singletonList(Role.USER)));
         }
 
         userRepository.save(user);
